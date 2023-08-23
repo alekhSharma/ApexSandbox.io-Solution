@@ -7,7 +7,7 @@ public String evenOrOdd(Integer num) {
    }while(num==0|| num==1)
 
     if(num==0)
-    return 'odd';
-    else
     return 'even';
+    else
+    return 'odd';
 }
