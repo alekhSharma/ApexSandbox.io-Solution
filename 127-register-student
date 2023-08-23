@@ -2,8 +2,8 @@ public String registerStudent(String name, String phone, String email) {
   
     apxio__Student__c aStudent = new apxio__Student__c();
     aStudent.name = name;
-    aStudent.phone = phone;
-    aStudent.email = email;
+    aStudent.apxio__Phone__c = phone;
+    aStudent.apxio__Email__c = email;
     insert aStudent;
 
     List<apxio__Student__c> returnList = [SELECT id, apxio__Registration_Number__c from apxio__Student__c where Id =: aStudent.id];
