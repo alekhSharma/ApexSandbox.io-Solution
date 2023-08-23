@@ -1,13 +1,8 @@
 public String evenOrOdd(Integer num) {
    
-   do{
-
-       num = num/2;
-
-   }while(num==0|| num==1)
-
-    if(num==0)
-    return 'even';
-    else
-    return 'odd';
+   if(math.mod(num, 2) == 0){
+    system.debug('even');
+}else{
+    system.debug('odd');
+}
 }
