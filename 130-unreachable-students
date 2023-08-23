@@ -1,7 +1,7 @@
 public List<apxio__Student__c> selectUnreachableStudents() {
 
     return [SELECT id, name from apxio__Student__c 
-    where ( apxio__Active__c = true ) 
+    where ( apxio__Active__c = true) AND () 
      ORDER BY name ASC];
 
 }
