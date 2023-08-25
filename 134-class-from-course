@@ -3,6 +3,7 @@ public Id classFromCourse(String courseName) {
     List<apxio__Course__c> cList = [SELECT id from apxio__Course__c where name =: courseName ];
 
     apxio__Class__c ac_rec = new apxio__Class__c();
+    if(cList.size()>0)
     ac_rec.apxio__Course__c = cList[0].Id;
     insert ac_rec;
 
