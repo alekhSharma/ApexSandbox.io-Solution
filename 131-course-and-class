@@ -8,10 +8,10 @@ public void createCourseAndClass(String name, String description) {
 
     apxio__Class__c aclass_unit = new apxio__Class__c();
     aclass_unit.name = name;
-    aclass_unit.apxio__Description__c = string.left(description);
+    aclass_unit.apxio__Description__c = string.substring(0,255);
     aclass_unit.apxio__Course__c = ac_unit.id;
 
     insert aclass_unit;
-    
+
 
 }
