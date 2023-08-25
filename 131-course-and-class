@@ -4,14 +4,18 @@ public void createCourseAndClass(String name, String description) {
     ac_unit.name = name;
     if(description!=null || description!=''){
     ac_unit.apxio__Course_Details__c = description;
+    }else{
+        ac_unit.apxio__Course_Details__c = null;
     }
-    
+
     insert ac_unit;
 
     apxio__Class__c aclass_unit = new apxio__Class__c();
     aclass_unit.name = name;
     if(description!=null || description!=''){
         aclass_unit.apxio__Description__c = description.left(255);
+    }else{
+        aclass_unit.apxio__Course_Details__c = null;
     }
     
     aclass_unit.apxio__Course__c = ac_unit.id;
