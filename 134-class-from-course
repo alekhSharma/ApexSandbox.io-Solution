@@ -4,7 +4,10 @@ public Id classFromCourse(String courseName) {
 
     apxio__Class__c ac_rec = new apxio__Class__c();
     if(cList.size()>0)
-    ac_rec.apxio__Course__c = cList[0].Id;
+    {ac_rec.apxio__Course__c = cList[0].Id;}
+    else{
+        ac_rec.apxio__Course__c = null;
+    }
     insert ac_rec;
 
     return ac_rec.id;
